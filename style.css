@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+    --body-text-color: #343a40;
+    --body-font-weight: 400;
+    --body-font-size: 16px;
+    --body-font-family: "Inter", sans-serif;
+    --main-color: #087f5b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font-family);
+    color: var(--body-text-color);
+    line-height: 1;
+}
+
+.accordion {
+    width: 700px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.item {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    /* border-top: 2px solid var(--main-color); */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 24px;
+    row-gap: 32px;
+    align-items: center;
+}
+
+.hidden-box {
+    grid-column: 2;
+    display: none;
+}
+
+.number,
+.text {
+    font-size: 24px;
+    font-weight: 500;
+    /* color: var(--main-color); */
+}
+
+.number {
+    color: #adb5bd;
+}
+
+.open {
+    border-top: 4px solid var(--main-color);
+}
+
+.open .hidden-box {
+    display: block;
+}
+
+.open .number,
+.open .text {
+    color: var(--main-color);
+}
+
+.hidden-box p {
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.hidden-box ul {
+    color: #adb5bd;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
